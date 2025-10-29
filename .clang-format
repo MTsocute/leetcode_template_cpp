@@ -5,16 +5,16 @@ TabWidth: 4           # Tab 键宽度为 4 个空格
 UseTab: Never         # 永不使用 Tab，只用空格
 
 AccessModifierOffset: -4  # 访问修饰符（public/private）相对于类缩进减少 4 个空格
-AlignOperands: false                     # 对齐操作数
+AlignOperands: Align                     # 对齐操作数
 AlignTrailingComments: true              # 对齐行尾注释
 AlignConsecutiveAssignments: false       # 对齐连续的赋值语句
 AlignConsecutiveDeclarations: false      # 对齐连续的声明语句
 AlignConsecutiveMacros: AcrossEmptyLinesAndComments  # 跨空行和注释对齐宏定义
 
 AllowShortFunctionsOnASingleLine: Empty               # 只有空函数允许写在一行
-AllowShortIfStatementsOnASingleLine: AllIfsAndElse    # 允许短 if/else 语句写在一行
-AllowShortLoopsOnASingleLine: true             # 允许短循环写在一行
-AllowShortBlocksOnASingleLine: Always          # 允许短代码块写在一行
+AllowShortIfStatementsOnASingleLine: Always           # 无花括号的短 if 语句写在一行
+AllowShortLoopsOnASingleLine: true                    # 无花括号的短循环写在一行
+AllowShortBlocksOnASingleLine: Never                  # 有花括号的代码块不允许写在一行
 
 AlwaysBreakTemplateDeclarations: Yes    # 模板声明总是换行
 BreakBeforeBraces: Custom               # 自定义花括号换行规则

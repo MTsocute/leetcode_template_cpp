@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "MSVC-default",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_C_STANDARD": "99",
+        "CMAKE_CXX_STANDARD": "26",
+        "EXECUTABLE_OUTPUT_PATH": "${sourceDir}/build/bin/idea",
+        "CMAKE_TOOLCHAIN_FILE": "D:/Develop_Tool/vcpkg/scripts/buildsystems/vcpkg.cmake"
+      },
+      "vendor": {
+        "jetbrains.com/clion": {
+          "toolchain": "MSVC"
+        }
+      }
+    },
+    {
+      "name": "VSCode-default",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "cl.exe",
+        "CMAKE_CXX_COMPILER": "cl.exe",
+        "CMAKE_C_STANDARD": "99",
+        "CMAKE_CXX_STANDARD": "26",
+        "EXECUTABLE_OUTPUT_PATH": "${sourceDir}/build/bin/vscode",
+        "CMAKE_TOOLCHAIN_FILE": "D:/Develop_Tool/vcpkg/scripts/buildsystems/vcpkg.cmake"
+      },
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "toolset": {
+        "value": "host=x64",
+        "strategy": "external"
+      }
+    },
+    {
+      "name": "Clion-Debug",
+      "inherits": "MSVC-default",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "Clion-Release",
+      "inherits": "MSVC-default",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "VSCode-Debug",
+      "inherits": "VSCode-default",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "VSCode-Release",
+      "inherits": "VSCode-default",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Clion-Debug",
+      "configurePreset": "Clion-Debug"
+    },
+    {
+      "name": "Clion-Release",
+      "configurePreset": "Clion-Release"
+    },
+    {
+      "name": "VSCode-Debug",
+      "configurePreset": "VSCode-Debug"
+    },
+    {
+      "name": "VSCode-Release",
+      "configurePreset": "VSCode-Release"
+    }
+  ]
+}

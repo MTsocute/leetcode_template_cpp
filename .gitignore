@@ -44,7 +44,8 @@
 # compile
 build/
 .idea/
-.vscode/
+.vscode/.cache
+.vscode/compile_commands.json
 
 # ignore main.cpp change
 main.cpp

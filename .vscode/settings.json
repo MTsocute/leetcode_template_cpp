@@ -1,0 +1,8 @@
+{
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/.vscode",
+        "--background-index",
+        "--header-insertion=never"
+    ],
+    "clangd.path": "D:/Develop_Tool/C_SDK/clangd_21.1.0/bin/clangd.exe",
+}

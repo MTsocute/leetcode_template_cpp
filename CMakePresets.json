@@ -41,6 +41,20 @@
       }
     },
     {
+      "name": "VSCode-macOS-default",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_C_STANDARD": "99",
+        "CMAKE_CXX_STANDARD": "26",
+        "EXECUTABLE_OUTPUT_PATH": "${sourceDir}/build/bin/vscode",
+        "CMAKE_TOOLCHAIN_FILE": "/Users/momo/vcpkg/scripts/buildsystems/vcpkg.cmake"
+      }
+    },
+    {
       "name": "Clion-Debug",
       "inherits": "MSVC-default",
       "cacheVariables": {
@@ -64,6 +78,20 @@
     {
       "name": "VSCode-Release",
       "inherits": "VSCode-default",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "VSCode-macOS-Debug",
+      "inherits": "VSCode-macOS-default",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "VSCode-macOS-Release",
+      "inherits": "VSCode-macOS-default",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release"
       }
@@ -85,6 +113,14 @@
     {
       "name": "VSCode-Release",
       "configurePreset": "VSCode-Release"
+    },
+    {
+      "name": "VSCode-macOS-Debug",
+      "configurePreset": "VSCode-macOS-Debug"
+    },
+    {
+      "name": "VSCode-macOS-Release",
+      "configurePreset": "VSCode-macOS-Release"
     }
   ]
 }

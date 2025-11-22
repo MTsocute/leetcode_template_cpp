@@ -47,5 +47,5 @@ build/
 .vscode/.cache
 .vscode/compile_commands.json
 
-# ignore main.cpp change
-main.cpp
+# vcpkg download
+vcpkg_installed/

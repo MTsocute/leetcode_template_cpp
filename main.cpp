@@ -4,9 +4,14 @@
 template <class T>
 concept Addable = requires(T x, T y) { x + y; };
 
+template <class T>
+concept Subtractable = requires(T x, T y) { x - y; };
+
+
 template <Addable T>
 auto add(T a, T b) -> decltype(a + b)
 {
+
     return a + b;
 }
 

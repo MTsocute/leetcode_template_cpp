@@ -4,4 +4,5 @@
         "--background-index",
         "--header-insertion=never"
     ],
+    "cmake.revealLog": "never"
 }
